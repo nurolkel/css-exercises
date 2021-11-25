@@ -17,4 +17,9 @@ button {
   color: black;
   font-size: small;
   text-align: center;
+  transition: font-size 300ms;
+}
+
+button:hover {
+  font-size: 30px;
 }

@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: display 500ms;
 }
 
 .dropdown-menu {
@@ -23,6 +24,9 @@ button {
   border: none;
 }
 
+
+
+
 ul {
   position: absolute;
   left: -25%;
@@ -30,8 +34,19 @@ ul {
   width: 160px;
   list-style: none;
   text-align: center;
+  transition: display 500ms;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms;
 }
+
+
+
 
 li {
   padding: 16px;
+}
+
+.dropdown-menu:hover ul  {
+  max-height: 500px;
 }

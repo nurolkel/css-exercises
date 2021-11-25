@@ -12,7 +12,20 @@ body {
   height: 100vh;
   background-color: #ffffff;
   opacity: 100%;
+  transition: opacity ease-in 500ms, background-color ease-in 500ms;
 }
+
+.button-container.show {
+  opacity: 40%;
+  background-color: black;
+}
+
+#trigger-modal:hover,
+#close-modal:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #000000;
+}
+
 
 #trigger-modal,
 .popup-modal {
@@ -42,6 +55,27 @@ body {
   align-items: center;
   margin-top: 10%;
   opacity: 0;
+  transition: margin-top ease-out 500ms, opacity ease-out 500ms, visibility linear 500ms;
+  visibility: hidden;
+}
+
+.popup-modal.show {
+  width: 30%;
+  height: 15%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90px;
+}
+
+.popup-modal.show {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 0;
+  transition: margin-top ease-out 500ms, visibility linear 500ms, opacity ease-out 500ms;
 }
 
 #close-modal {
