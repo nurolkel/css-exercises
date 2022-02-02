@@ -12,6 +12,7 @@ body {
   height: 100vh;
   background-color: #ffffff;
   opacity: 100%;
+<<<<<<< HEAD:animation/03-pop-up/style.css
   transition: opacity ease-in 500ms, background-color ease-in 500ms;
 }
 
@@ -36,6 +37,14 @@ body {
 }
 
 #trigger-modal {
+=======
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+>>>>>>> 9d71adb6e1289f21e1047b5e6c4247fb481a9a24:animation/02-pop-up/style.css
   padding: 20px;
   color: #ffffff;
   background-color: #0e79dd;
@@ -45,11 +54,11 @@ body {
 }
 
 .popup-modal {
-  width: 30%;
-  height: 15%;
+  padding: 32px 64px;
   background-color: white;
   border: 1px solid black;
   border-radius: 10px;
+<<<<<<< HEAD:animation/03-pop-up/style.css
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,13 +85,35 @@ body {
   visibility: visible;
   margin-top: 0;
   transition: margin-top ease-out 500ms, visibility linear 500ms, opacity ease-out 500ms;
+=======
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0%;
+  text-align: center;
+}
+.popup-modal p {
+  margin-bottom: 24px
+>>>>>>> 9d71adb6e1289f21e1047b5e6c4247fb481a9a24:animation/02-pop-up/style.css
 }
 
-#close-modal {
-  padding: 20px;
-  color: #ffffff;
-  background-color: #0e79dd;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
+.backdrop {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0%;
 }
+
+.popup-modal.show {
+  opacity: 100%;
+  pointer-events: all;
+}
+
+.backdrop.show {
+  opacity: 30%;
+}
+

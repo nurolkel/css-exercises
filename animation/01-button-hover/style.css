@@ -9,17 +9,20 @@
 }
 
 button {
-  width: 158px;
-  height: 55px;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  font-size: small;
+  border-radius: 8px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  font-size: 18px;
+  padding: 16px 24px;
   text-align: center;
+<<<<<<< HEAD
   transition: font-size 300ms;
 }
 
 button:hover {
   font-size: 30px;
 }
+=======
+}
+>>>>>>> 9d71adb6e1289f21e1047b5e6c4247fb481a9a24
